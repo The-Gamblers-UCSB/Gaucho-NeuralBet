@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Box, Button, FormControl, FormLabel, Input, Heading, Stack, useToast } from '@chakra-ui/react';
 
 function Login() {
+  console.log("Hello");
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -47,6 +48,7 @@ function Login() {
   };
 
   return (
+    
     <Box
       bg="gray.800"
       minH="100vh"
