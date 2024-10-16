@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { Button, useToast } from '@chakra-ui/react';
+import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { ChakraProvider, Button, useToast, Box, Text, Flex, Stack, Link } from '@chakra-ui/react';
 import axios from 'axios';
 
 function HomePage() {
@@ -29,13 +30,23 @@ function HomePage() {
     }
   };
 
+
+
   return (
-    <div>
-      <h1>Welcome to the Home Page</h1>
-      <Button onClick={handleFetchData} colorScheme="blue">
-        Fetch Data
-      </Button>
-    </div>
+    <ChakraProvider>
+            <Flex
+                direction="column"
+                minHeight="100vh"
+            >
+                <Box as="main" flex="1" p={8}>
+                    <h1>Welcome to My Website</h1>
+                    <Button onClick={handleFetchData} colorScheme="orange">
+                    Fetch Data
+                    </Button>
+                    <p>This is the main content of the page.</p>
+                </Box>
+            </Flex>
+        </ChakraProvider>
   );
 }
 

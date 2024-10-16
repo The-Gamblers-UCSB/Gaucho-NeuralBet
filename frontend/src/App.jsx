@@ -6,6 +6,7 @@ import Signup from './pages/Signup'; // Adjust import paths if necessary
 import HomePage from './pages/HomePage'; // Adjust import paths if necessary
 import { ChakraProvider } from "@chakra-ui/react"; // Import ChakraProvider
 import { extendTheme } from "@chakra-ui/react"; // Import extendTheme
+import Footer from './footer';
 
 // Theme definition
 const colors = {
@@ -29,6 +30,7 @@ function App() {
           <Route path='/login' element={<Login />} />
         </Routes>
       </Router>
+      <Footer />
     </ChakraProvider>
   );
 }
