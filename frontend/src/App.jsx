@@ -6,7 +6,7 @@ import Signup from './pages/Signup'; // Adjust import paths if necessary
 import HomePage from './pages/HomePage'; // Adjust import paths if necessary
 import { ChakraProvider } from "@chakra-ui/react"; // Import ChakraProvider
 import { extendTheme } from "@chakra-ui/react"; // Import extendTheme
-import Footer from './footer';
+import Footer from './components/footer';
 
 // Theme definition
 const colors = {

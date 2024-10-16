@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { ChakraProvider, Button, useToast, Box, Text, Flex, Stack, Link } from '@chakra-ui/react';
+import { ChakraProvider, Button, useToast, Box, Flex } from '@chakra-ui/react';
+import FantasyDashboard from '../components/FantasyDashboard';
 import axios from 'axios';
 
 function HomePage() {
@@ -45,6 +45,7 @@ function HomePage() {
                     </Button>
                     <p>This is the main content of the page.</p>
                 </Box>
+                <FantasyDashboard />
             </Flex>
         </ChakraProvider>
   );
