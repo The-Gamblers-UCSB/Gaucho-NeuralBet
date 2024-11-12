@@ -14,5 +14,6 @@ Fullstack Webapp using MongoDB and React to model different statistics and proba
 3. Run npm install mongoose 
 4. Run npm install vite
 5. cd into frontend folder
-6. Run npm run dev 
+6. Run npm install -D tailwindcss postcss autoprefixer vite
+7. Run npm run dev 
 
