@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { ChakraProvider, Button, useToast, Box, Flex } from '@chakra-ui/react';
-import FantasyDashboard from '../components/FantasyDashboard';
+
 import axios from 'axios';
 
 function HomePage() {
@@ -8,26 +8,43 @@ function HomePage() {
 
   // Example function to handle button click
   const handleFetchData = async () => {
-    try {
-      const response = await axios.get('http://localhost:5001/api/users'); // Adjust the endpoint as needed
-      console.log(response.data);
-      toast({
-        title: "Data fetched successfully!",
-        description: "Check the console for data.",
-        status: "success",
-        duration: 5000,
-        isClosable: true,
+    let nextCursor = null;
+    let eventData = [];
+    do {
+      try {
+        const response = await axios.get('/v1/events', {
+          params: {
+            leagueID: 'NBA',
+            startsAfter: '2025-01-07',
+            startsBefore: '2025-01-07',
+            limit: 50,
+            marketOddsAvailable: true,
+            cursor: nextCursor
+          }
+        });
+    
+        // response.data will contain the 30 events for this request
+        const data = response.data;
+    
+        eventData = eventData.concat(data.events);
+    
+        nextCursor = data?.nextCursor;
+    
+      } catch (error) {
+        console.error('Error fetching events:', error);
+        break;
+      }
+    } while (nextCursor);
+    
+    // Once you have this data, you could feed it to your betting model, display it in your sportsbook application, etc.
+    events.forEach((event) => {
+      const odds = event.odds;
+      Object.values(odds).forEach((oddObject) => {
+        console.log(`Odd ID: ${oddObject.oddID}`);
+        console.log(`Odd Value: ${oddObject.closeOdds}`);
       });
-    } catch (error) {
-      console.error('Error fetching data:', error);
-      toast({
-        title: "Error fetching data",
-        description: error.response?.data || error.message,
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-      });
-    }
+    });
+
   };
 
 
@@ -45,7 +62,6 @@ function HomePage() {
                     </Button>
                     <p>This is the main content of the page.</p>
                 </Box>
-                <FantasyDashboard />
             </Flex>
         </ChakraProvider>
   );
