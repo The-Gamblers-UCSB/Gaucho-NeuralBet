@@ -15,12 +15,12 @@ const Footer = () => {
         >
             <Flex justify="center" align="center" direction="column">
                 <Stack direction="row" spacing={6} mb={3}>
-                    <Link href="#about" color="teal.200">About Us</Link>
-                    <Link href="#services" color="teal.200">Services</Link>
-                    <Link href="#contact" color="teal.200">Contact</Link>
+                    <Link href="/about" color="teal.200">About Us</Link>
+                    <Link href="/services" color="teal.200">Services</Link>
+                    <Link href="/contact" color="teal.200">Contact</Link>
                 </Stack>
                 <Text fontSize="sm">
-                    © 2024 My Website. All Rights Reserved.
+                    © 2025 Gaucho NeuralBet. All Rights Reserved.
                 </Text>
             </Flex>
         </Box>

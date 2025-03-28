@@ -1,70 +1,91 @@
-import React, { useEffect } from 'react';
-import { ChakraProvider, Button, useToast, Box, Flex } from '@chakra-ui/react';
+import React from 'react';
+import { Box, Button, Text, Heading, VStack, useBreakpointValue, Fade } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { FaChartLine, FaBrain, FaTrophy } from 'react-icons/fa';
+import Footer from "../components/footer"
+const AnimatedBox = motion(Box);
 
-import axios from 'axios';
-
-function HomePage() {
-  const toast = useToast(); // Initialize the toast
-
-  // Example function to handle button click
-  const handleFetchData = async () => {
-    let nextCursor = null;
-    let eventData = [];
-    do {
-      try {
-        const response = await axios.get('/v1/events', {
-          params: {
-            leagueID: 'NBA',
-            startsAfter: '2025-01-07',
-            startsBefore: '2025-01-07',
-            limit: 50,
-            marketOddsAvailable: true,
-            cursor: nextCursor
-          }
-        });
-    
-        // response.data will contain the 30 events for this request
-        const data = response.data;
-    
-        eventData = eventData.concat(data.events);
-    
-        nextCursor = data?.nextCursor;
-    
-      } catch (error) {
-        console.error('Error fetching events:', error);
-        break;
-      }
-    } while (nextCursor);
-    
-    // Once you have this data, you could feed it to your betting model, display it in your sportsbook application, etc.
-    events.forEach((event) => {
-      const odds = event.odds;
-      Object.values(odds).forEach((oddObject) => {
-        console.log(`Odd ID: ${oddObject.oddID}`);
-        console.log(`Odd Value: ${oddObject.closeOdds}`);
-      });
-    });
-
-  };
-
-
+const Homepage = () => {
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
-    <ChakraProvider>
-            <Flex
-                direction="column"
-                minHeight="100vh"
-            >
-                <Box as="main" flex="1" p={8}>
-                    <h1>Welcome to My Website</h1>
-                    <Button onClick={handleFetchData} colorScheme="orange">
-                    Fetch Data
-                    </Button>
-                    <p>This is the main content of the page.</p>
-                </Box>
-            </Flex>
-        </ChakraProvider>
-  );
-}
+    <Box>
+    <VStack spacing={8} align="center" p={8} bg="gray.50" minHeight="100vh">
+      <Fade in>
+        <Heading as="h1" size="3xl" color="teal.500" textAlign="center">
+          Sports Betting Optimizer
+        </Heading>
+      </Fade>
 
-export default HomePage;
+      <AnimatedBox
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <Text fontSize="xl" textAlign="center" maxW="600px">
+          Track your betting performance and optimize your strategies with AI-backed analysis. 
+          Our neural network analyzes your betting history to provide intelligent recommendations based on your behavior.
+        </Text>
+      </AnimatedBox>
+
+      <VStack spacing={6} direction={isMobile ? 'column' : 'row'} justify="center" wrap="wrap">
+        <AnimatedBox
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Box p={6} bg="white" boxShadow="md" rounded="md" textAlign="center" width="250px">
+            <FaChartLine size={40} color="teal.500" />
+            <Heading size="md" color="teal.700" mt={4}>
+              Bet Performance Tracking
+            </Heading>
+            <Text mt={2}>Track whether your bets are successful or not to improve your strategy.</Text>
+          </Box>
+        </AnimatedBox>
+
+        <AnimatedBox
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Box p={6} bg="white" boxShadow="md" rounded="md" textAlign="center" width="250px">
+            <FaBrain size={40} color="teal.500" />
+            <Heading size="md" color="teal.700" mt={4}>
+              Neural Network Analysis
+            </Heading>
+            <Text mt={2}>Our neural network analyzes your betting behavior and offers valuable insights.</Text>
+          </Box>
+        </AnimatedBox>
+
+        <AnimatedBox
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Box p={6} bg="white" boxShadow="md" rounded="md" textAlign="center" width="250px">
+            <FaTrophy size={40} color="teal.500" />
+            <Heading size="md" color="teal.700" mt={4}>
+              Bet Recommendations
+            </Heading>
+            <Text mt={2}>Get intelligent betting recommendations based on your performance history.</Text>
+          </Box>
+        </AnimatedBox>
+      </VStack>
+
+      <Button
+        size="lg"
+        colorScheme="teal"
+        variant="solid"
+        rightIcon={<FaTrophy />}
+        mt={8}
+        onClick={() => alert('Start Optimizing!')}
+      >
+        Get Started
+      </Button>
+    </VStack>
+        <Footer />
+    </Box>
+  );
+};
+
+export default Homepage;
