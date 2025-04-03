@@ -1,0 +1,660 @@
+TEAM_NAME,E_DEF_RATING,SEASON
+Denver Nuggets,99.9,2003-04
+Boston Celtics,100.2,2003-04
+Dallas Mavericks,104.3,2003-04
+Sacramento Kings,102.2,2003-04
+Phoenix Suns,102.2,2003-04
+Washington Wizards,101.9,2003-04
+Los Angeles Lakers,98.7,2003-04
+Chicago Bulls,100.5,2003-04
+Milwaukee Bucks,102.6,2003-04
+Memphis Grizzlies,99.2,2003-04
+Los Angeles Clippers,105.9,2003-04
+Orlando Magic,107.5,2003-04
+Cleveland Cavaliers,101.3,2003-04
+Atlanta Hawks,103.1,2003-04
+Seattle SuperSonics,104.7,2003-04
+Golden State Warriors,101.2,2003-04
+New York Knicks,100.3,2003-04
+New Jersey Nets,95.2,2003-04
+New Orleans Hornets,99.5,2003-04
+Minnesota Timberwolves,96.6,2003-04
+San Antonio Spurs,91.6,2003-04
+Philadelphia 76ers,99.1,2003-04
+Miami Heat,98.9,2003-04
+Detroit Pistons,92.5,2003-04
+Houston Rockets,96.4,2003-04
+Indiana Pacers,94.8,2003-04
+Utah Jazz,100.4,2003-04
+Toronto Raptors,97.6,2003-04
+Portland Trail Blazers,102.2,2003-04
+Phoenix Suns,103.7,2004-05
+Philadelphia 76ers,101.5,2004-05
+Orlando Magic,104.2,2004-05
+Washington Wizards,104.2,2004-05
+Denver Nuggets,100.7,2004-05
+Boston Celtics,103.3,2004-05
+Golden State Warriors,104.0,2004-05
+Sacramento Kings,105.0,2004-05
+Dallas Mavericks,101.0,2004-05
+Chicago Bulls,97.5,2004-05
+Toronto Raptors,105.9,2004-05
+Charlotte Bobcats,104.7,2004-05
+Atlanta Hawks,108.4,2004-05
+Los Angeles Lakers,108.0,2004-05
+Milwaukee Bucks,106.7,2004-05
+Miami Heat,99.8,2004-05
+New York Knicks,106.5,2004-05
+Cleveland Cavaliers,102.5,2004-05
+Portland Trail Blazers,104.5,2004-05
+Los Angeles Clippers,103.4,2004-05
+Minnesota Timberwolves,103.7,2004-05
+New Jersey Nets,100.4,2004-05
+San Antonio Spurs,95.8,2004-05
+Houston Rockets,98.9,2004-05
+Memphis Grizzlies,99.9,2004-05
+Seattle SuperSonics,106.1,2004-05
+Utah Jazz,107.0,2004-05
+New Orleans Hornets,105.1,2004-05
+Detroit Pistons,97.9,2004-05
+Indiana Pacers,101.9,2004-05
+Phoenix Suns,102.9,2005-06
+Denver Nuggets,102.1,2005-06
+Charlotte Bobcats,104.2,2005-06
+Golden State Warriors,103.5,2005-06
+Chicago Bulls,100.2,2005-06
+Philadelphia 76ers,104.8,2005-06
+Washington Wizards,104.7,2005-06
+Boston Celtics,104.0,2005-06
+Seattle SuperSonics,111.3,2005-06
+Sacramento Kings,102.3,2005-06
+Los Angeles Clippers,100.7,2005-06
+Miami Heat,101.7,2005-06
+Los Angeles Lakers,102.6,2005-06
+Milwaukee Bucks,105.0,2005-06
+Toronto Raptors,109.7,2005-06
+New York Knicks,108.4,2005-06
+Atlanta Hawks,108.3,2005-06
+Cleveland Cavaliers,102.6,2005-06
+New Jersey Nets,99.8,2005-06
+Indiana Pacers,99.9,2005-06
+New Orleans/Oklahoma City Hornets,104.4,2005-06
+Minnesota Timberwolves,101.7,2005-06
+Orlando Magic,104.7,2005-06
+San Antonio Spurs,96.9,2005-06
+Houston Rockets,100.6,2005-06
+Utah Jazz,104.5,2005-06
+Dallas Mavericks,101.9,2005-06
+Portland Trail Blazers,109.4,2005-06
+Detroit Pistons,100.2,2005-06
+Memphis Grizzlies,99.2,2005-06
+Golden State Warriors,104.5,2006-07
+Denver Nuggets,102.7,2006-07
+Phoenix Suns,103.4,2006-07
+Sacramento Kings,105.2,2006-07
+Washington Wizards,108.0,2006-07
+Los Angeles Lakers,106.1,2006-07
+Chicago Bulls,97.0,2006-07
+Memphis Grizzlies,109.7,2006-07
+Indiana Pacers,103.0,2006-07
+Milwaukee Bucks,109.1,2006-07
+Toronto Raptors,103.2,2006-07
+Charlotte Bobcats,104.8,2006-07
+Boston Celtics,104.5,2006-07
+Seattle SuperSonics,107.5,2006-07
+Utah Jazz,104.7,2006-07
+New Jersey Nets,103.5,2006-07
+Minnesota Timberwolves,105.3,2006-07
+Cleveland Cavaliers,98.9,2006-07
+Los Angeles Clippers,102.8,2006-07
+Philadelphia 76ers,103.9,2006-07
+New York Knicks,106.3,2006-07
+Houston Rockets,97.5,2006-07
+New Orleans/Oklahoma City Hornets,104.0,2006-07
+Atlanta Hawks,105.5,2006-07
+Orlando Magic,101.7,2006-07
+Miami Heat,102.0,2006-07
+San Antonio Spurs,97.4,2006-07
+Dallas Mavericks,100.6,2006-07
+Portland Trail Blazers,107.3,2006-07
+Detroit Pistons,101.1,2006-07
+Denver Nuggets,103.2,2007-08
+Golden State Warriors,106.6,2007-08
+Indiana Pacers,104.6,2007-08
+Phoenix Suns,104.9,2007-08
+Seattle SuperSonics,106.9,2007-08
+Los Angeles Lakers,102.8,2007-08
+Memphis Grizzlies,109.2,2007-08
+Sacramento Kings,107.2,2007-08
+Chicago Bulls,104.2,2007-08
+Orlando Magic,102.7,2007-08
+Utah Jazz,104.0,2007-08
+Los Angeles Clippers,106.4,2007-08
+Minnesota Timberwolves,108.9,2007-08
+New York Knicks,109.6,2007-08
+Charlotte Bobcats,106.8,2007-08
+New Jersey Nets,106.6,2007-08
+Milwaukee Bucks,109.8,2007-08
+Atlanta Hawks,105.9,2007-08
+Boston Celtics,96.2,2007-08
+Philadelphia 76ers,103.4,2007-08
+Houston Rockets,98.8,2007-08
+Dallas Mavericks,103.1,2007-08
+Cleveland Cavaliers,103.7,2007-08
+Miami Heat,107.1,2007-08
+Toronto Raptors,104.3,2007-08
+New Orleans Hornets,102.9,2007-08
+Washington Wizards,106.8,2007-08
+San Antonio Spurs,99.5,2007-08
+Portland Trail Blazers,105.5,2007-08
+Detroit Pistons,100.0,2007-08
+Golden State Warriors,110.1,2008-09
+New York Knicks,108.4,2008-09
+Indiana Pacers,106.5,2008-09
+Phoenix Suns,108.5,2008-09
+Denver Nuggets,103.5,2008-09
+Los Angeles Lakers,101.9,2008-09
+Sacramento Kings,111.9,2008-09
+Oklahoma City Thunder,106.9,2008-09
+Chicago Bulls,105.8,2008-09
+Utah Jazz,104.7,2008-09
+Milwaukee Bucks,104.9,2008-09
+Orlando Magic,98.9,2008-09
+Los Angeles Clippers,108.8,2008-09
+Toronto Raptors,107.1,2008-09
+Minnesota Timberwolves,109.1,2008-09
+Dallas Mavericks,105.3,2008-09
+Washington Wizards,111.2,2008-09
+Houston Rockets,101.4,2008-09
+Boston Celtics,99.4,2008-09
+Philadelphia 76ers,104.7,2008-09
+Memphis Grizzlies,106.8,2008-09
+Miami Heat,104.7,2008-09
+New Jersey Nets,108.2,2008-09
+Atlanta Hawks,104.6,2008-09
+Cleveland Cavaliers,99.4,2008-09
+Charlotte Bobcats,103.4,2008-09
+San Antonio Spurs,102.0,2008-09
+New Orleans Hornets,104.1,2008-09
+Portland Trail Blazers,104.5,2008-09
+Detroit Pistons,105.2,2008-09
+Golden State Warriors,109.4,2009-10
+Indiana Pacers,104.2,2009-10
+Minnesota Timberwolves,109.3,2009-10
+Phoenix Suns,106.9,2009-10
+Denver Nuggets,104.7,2009-10
+Houston Rockets,105.5,2009-10
+Sacramento Kings,107.2,2009-10
+New York Knicks,109.1,2009-10
+Memphis Grizzlies,107.6,2009-10
+Utah Jazz,102.9,2009-10
+Oklahoma City Thunder,101.6,2009-10
+Chicago Bulls,102.6,2009-10
+Toronto Raptors,110.2,2009-10
+Los Angeles Lakers,101.1,2009-10
+Los Angeles Clippers,107.1,2009-10
+Dallas Mavericks,103.2,2009-10
+New Orleans Hornets,107.3,2009-10
+Orlando Magic,100.2,2009-10
+Washington Wizards,106.7,2009-10
+Milwaukee Bucks,100.9,2009-10
+San Antonio Spurs,102.0,2009-10
+Philadelphia 76ers,107.6,2009-10
+Boston Celtics,101.1,2009-10
+New Jersey Nets,108.0,2009-10
+Cleveland Cavaliers,101.5,2009-10
+Charlotte Bobcats,100.2,2009-10
+Atlanta Hawks,104.0,2009-10
+Miami Heat,100.9,2009-10
+Detroit Pistons,108.9,2009-10
+Portland Trail Blazers,104.0,2009-10
+Minnesota Timberwolves,108.3,2010-11
+New York Knicks,106.9,2010-11
+Denver Nuggets,104.8,2010-11
+Sacramento Kings,106.3,2010-11
+Golden State Warriors,107.6,2010-11
+Indiana Pacers,103.4,2010-11
+Houston Rockets,106.2,2010-11
+Phoenix Suns,107.4,2010-11
+Washington Wizards,107.2,2010-11
+Cleveland Cavaliers,109.1,2010-11
+Los Angeles Clippers,106.3,2010-11
+Toronto Raptors,110.0,2010-11
+Oklahoma City Thunder,104.0,2010-11
+San Antonio Spurs,102.8,2010-11
+Memphis Grizzlies,102.5,2010-11
+Philadelphia 76ers,102.5,2010-11
+Utah Jazz,107.3,2010-11
+Orlando Magic,99.1,2010-11
+Los Angeles Lakers,101.3,2010-11
+Dallas Mavericks,102.3,2010-11
+Miami Heat,100.7,2010-11
+Chicago Bulls,97.4,2010-11
+Boston Celtics,97.8,2010-11
+New Jersey Nets,107.0,2010-11
+Milwaukee Bucks,99.9,2010-11
+Charlotte Bobcats,104.8,2010-11
+Atlanta Hawks,104.6,2010-11
+Detroit Pistons,109.0,2010-11
+New Orleans Hornets,102.5,2010-11
+Portland Trail Blazers,104.2,2010-11
+Sacramento Kings,106.8,2011-12
+Denver Nuggets,103.4,2011-12
+Milwaukee Bucks,102.4,2011-12
+Minnesota Timberwolves,103.6,2011-12
+New York Knicks,98.4,2011-12
+Oklahoma City Thunder,100.0,2011-12
+San Antonio Spurs,100.6,2011-12
+Washington Wizards,103.8,2011-12
+Phoenix Suns,103.8,2011-12
+Golden State Warriors,106.0,2011-12
+Houston Rockets,102.1,2011-12
+Cleveland Cavaliers,106.0,2011-12
+Utah Jazz,103.6,2011-12
+Portland Trail Blazers,103.7,2011-12
+Miami Heat,97.1,2011-12
+Dallas Mavericks,99.7,2011-12
+Charlotte Bobcats,107.8,2011-12
+Indiana Pacers,100.4,2011-12
+Memphis Grizzlies,98.9,2011-12
+Los Angeles Lakers,101.7,2011-12
+New Jersey Nets,106.9,2011-12
+Boston Celtics,95.5,2011-12
+Atlanta Hawks,98.6,2011-12
+Philadelphia 76ers,96.6,2011-12
+Los Angeles Clippers,102.9,2011-12
+Chicago Bulls,95.3,2011-12
+Detroit Pistons,104.0,2011-12
+Toronto Raptors,101.5,2011-12
+Orlando Magic,101.7,2011-12
+New Orleans Hornets,102.3,2011-12
+Houston Rockets,103.5,2012-13
+Denver Nuggets,102.0,2012-13
+Milwaukee Bucks,102.3,2012-13
+Los Angeles Lakers,103.6,2012-13
+Golden State Warriors,102.6,2012-13
+San Antonio Spurs,99.2,2012-13
+Sacramento Kings,108.6,2012-13
+Dallas Mavericks,104.0,2012-13
+Oklahoma City Thunder,99.2,2012-13
+Phoenix Suns,105.7,2012-13
+Minnesota Timberwolves,102.9,2012-13
+Cleveland Cavaliers,106.9,2012-13
+Atlanta Hawks,101.8,2012-13
+Orlando Magic,106.7,2012-13
+Washington Wizards,100.6,2012-13
+Charlotte Bobcats,108.9,2012-13
+Boston Celtics,100.4,2012-13
+Portland Trail Blazers,106.9,2012-13
+Los Angeles Clippers,101.0,2012-13
+Utah Jazz,104.3,2012-13
+Philadelphia 76ers,103.0,2012-13
+Detroit Pistons,105.6,2012-13
+Miami Heat,100.5,2012-13
+Toronto Raptors,104.7,2012-13
+Indiana Pacers,96.6,2012-13
+New York Knicks,103.5,2012-13
+Chicago Bulls,100.3,2012-13
+Brooklyn Nets,103.6,2012-13
+Memphis Grizzlies,97.4,2012-13
+New Orleans Hornets,107.6,2012-13
+Philadelphia 76ers,107.5,2013-14
+Los Angeles Lakers,107.9,2013-14
+Denver Nuggets,105.4,2013-14
+Minnesota Timberwolves,104.1,2013-14
+Houston Rockets,103.1,2013-14
+Golden State Warriors,99.9,2013-14
+Los Angeles Clippers,102.1,2013-14
+Phoenix Suns,103.8,2013-14
+Oklahoma City Thunder,101.0,2013-14
+Portland Trail Blazers,104.7,2013-14
+Detroit Pistons,107.3,2013-14
+San Antonio Spurs,100.1,2013-14
+Atlanta Hawks,104.1,2013-14
+Sacramento Kings,106.3,2013-14
+Orlando Magic,104.8,2013-14
+Boston Celtics,105.2,2013-14
+Dallas Mavericks,105.9,2013-14
+Cleveland Cavaliers,104.8,2013-14
+Washington Wizards,102.4,2013-14
+Indiana Pacers,96.7,2013-14
+Charlotte Bobcats,101.2,2013-14
+New Orleans Pelicans,107.3,2013-14
+Toronto Raptors,102.4,2013-14
+Milwaukee Bucks,108.9,2013-14
+Brooklyn Nets,104.9,2013-14
+Utah Jazz,109.1,2013-14
+Miami Heat,102.9,2013-14
+Chicago Bulls,97.8,2013-14
+New York Knicks,106.5,2013-14
+Memphis Grizzlies,102.1,2013-14
+Golden State Warriors,98.2,2014-15
+Houston Rockets,100.5,2014-15
+Denver Nuggets,105.5,2014-15
+Phoenix Suns,103.4,2014-15
+Boston Celtics,102.1,2014-15
+Oklahoma City Thunder,103.1,2014-15
+Philadelphia 76ers,102.1,2014-15
+Sacramento Kings,106.5,2014-15
+Dallas Mavericks,103.7,2014-15
+Los Angeles Clippers,103.0,2014-15
+Minnesota Timberwolves,109.6,2014-15
+Portland Trail Blazers,101.4,2014-15
+Milwaukee Bucks,99.3,2014-15
+Los Angeles Lakers,108.0,2014-15
+Atlanta Hawks,100.7,2014-15
+Washington Wizards,100.0,2014-15
+San Antonio Spurs,99.6,2014-15
+Orlando Magic,105.2,2014-15
+Indiana Pacers,100.9,2014-15
+Toronto Raptors,104.8,2014-15
+Chicago Bulls,101.5,2014-15
+Charlotte Hornets,101.0,2014-15
+Detroit Pistons,104.2,2014-15
+Brooklyn Nets,105.0,2014-15
+Cleveland Cavaliers,104.1,2014-15
+Memphis Grizzlies,99.9,2014-15
+New Orleans Pelicans,104.7,2014-15
+New York Knicks,107.2,2014-15
+Miami Heat,103.8,2014-15
+Utah Jazz,102.1,2014-15
+Sacramento Kings,106.3,2015-16
+Golden State Warriors,100.9,2015-16
+Boston Celtics,100.9,2015-16
+Phoenix Suns,107.0,2015-16
+Washington Wizards,103.6,2015-16
+Philadelphia 76ers,106.7,2015-16
+Houston Rockets,105.6,2015-16
+Atlanta Hawks,98.8,2015-16
+Oklahoma City Thunder,103.0,2015-16
+Indiana Pacers,100.2,2015-16
+New Orleans Pelicans,107.3,2015-16
+Portland Trail Blazers,105.6,2015-16
+Chicago Bulls,103.9,2015-16
+Orlando Magic,104.6,2015-16
+Denver Nuggets,106.4,2015-16
+LA Clippers,100.9,2015-16
+Los Angeles Lakers,109.3,2015-16
+Charlotte Hornets,101.8,2015-16
+Minnesota Timberwolves,107.1,2015-16
+Detroit Pistons,103.4,2015-16
+Brooklyn Nets,108.5,2015-16
+Milwaukee Bucks,105.7,2015-16
+Dallas Mavericks,104.3,2015-16
+New York Knicks,104.8,2015-16
+San Antonio Spurs,96.6,2015-16
+Memphis Grizzlies,105.4,2015-16
+Miami Heat,101.5,2015-16
+Cleveland Cavaliers,102.3,2015-16
+Toronto Raptors,102.7,2015-16
+Utah Jazz,101.6,2015-16
+Brooklyn Nets,108.0,2016-17
+Phoenix Suns,109.3,2016-17
+Houston Rockets,106.4,2016-17
+Golden State Warriors,101.1,2016-17
+Philadelphia 76ers,106.4,2016-17
+Los Angeles Lakers,110.6,2016-17
+Denver Nuggets,110.5,2016-17
+Oklahoma City Thunder,105.1,2016-17
+New Orleans Pelicans,104.9,2016-17
+Atlanta Hawks,103.1,2016-17
+Washington Wizards,106.9,2016-17
+Boston Celtics,105.5,2016-17
+Orlando Magic,108.0,2016-17
+Portland Trail Blazers,107.8,2016-17
+New York Knicks,108.7,2016-17
+Cleveland Cavaliers,108.0,2016-17
+LA Clippers,105.8,2016-17
+Indiana Pacers,106.3,2016-17
+Charlotte Hornets,106.1,2016-17
+Chicago Bulls,104.5,2016-17
+Miami Heat,104.1,2016-17
+Detroit Pistons,105.3,2016-17
+Toronto Raptors,104.9,2016-17
+Minnesota Timberwolves,109.1,2016-17
+Sacramento Kings,109.1,2016-17
+Milwaukee Bucks,106.4,2016-17
+San Antonio Spurs,100.9,2016-17
+Memphis Grizzlies,104.5,2016-17
+Dallas Mavericks,106.3,2016-17
+Utah Jazz,102.7,2016-17
+New Orleans Pelicans,105.6,2017-18
+Los Angeles Lakers,105.6,2017-18
+Phoenix Suns,110.6,2017-18
+Philadelphia 76ers,102.0,2017-18
+Golden State Warriors,104.2,2017-18
+LA Clippers,107.7,2017-18
+Brooklyn Nets,108.5,2017-18
+Atlanta Hawks,108.2,2017-18
+Charlotte Hornets,107.0,2017-18
+Chicago Bulls,109.1,2017-18
+Orlando Magic,107.7,2017-18
+Cleveland Cavaliers,109.5,2017-18
+Toronto Raptors,103.4,2017-18
+Houston Rockets,103.8,2017-18
+Oklahoma City Thunder,104.7,2017-18
+New York Knicks,108.4,2017-18
+Denver Nuggets,108.8,2017-18
+Washington Wizards,106.2,2017-18
+Portland Trail Blazers,104.2,2017-18
+Milwaukee Bucks,107.1,2017-18
+Detroit Pistons,104.8,2017-18
+Minnesota Timberwolves,108.4,2017-18
+Indiana Pacers,105.6,2017-18
+Boston Celtics,101.5,2017-18
+Miami Heat,104.0,2017-18
+Utah Jazz,101.6,2017-18
+Dallas Mavericks,107.4,2017-18
+Memphis Grizzlies,108.4,2017-18
+San Antonio Spurs,102.4,2017-18
+Sacramento Kings,109.0,2017-18
+Atlanta Hawks,111.2,2018-19
+New Orleans Pelicans,110.4,2018-19
+Sacramento Kings,108.7,2018-19
+Los Angeles Lakers,107.3,2018-19
+Milwaukee Bucks,103.0,2018-19
+Oklahoma City Thunder,104.7,2018-19
+LA Clippers,109.0,2018-19
+Philadelphia 76ers,107.1,2018-19
+Washington Wizards,111.3,2018-19
+Brooklyn Nets,107.0,2018-19
+Golden State Warriors,106.5,2018-19
+Phoenix Suns,112.2,2018-19
+Minnesota Timberwolves,110.2,2018-19
+Toronto Raptors,104.3,2018-19
+Utah Jazz,103.2,2018-19
+Boston Celtics,104.9,2018-19
+New York Knicks,110.9,2018-19
+Portland Trail Blazers,108.1,2018-19
+Dallas Mavericks,108.3,2018-19
+Charlotte Hornets,110.2,2018-19
+Chicago Bulls,110.9,2018-19
+Miami Heat,105.1,2018-19
+San Antonio Spurs,108.3,2018-19
+Houston Rockets,107.9,2018-19
+Indiana Pacers,104.2,2018-19
+Orlando Magic,105.8,2018-19
+Denver Nuggets,106.8,2018-19
+Detroit Pistons,106.9,2018-19
+Cleveland Cavaliers,115.1,2018-19
+Memphis Grizzlies,106.2,2018-19
+Milwaukee Bucks,100.6,2019-20
+Houston Rockets,107.4,2019-20
+New Orleans Pelicans,109.4,2019-20
+Minnesota Timberwolves,110.0,2019-20
+Atlanta Hawks,112.3,2019-20
+Memphis Grizzlies,107.5,2019-20
+Washington Wizards,112.7,2019-20
+Brooklyn Nets,107.1,2019-20
+LA Clippers,105.3,2019-20
+Phoenix Suns,108.4,2019-20
+Toronto Raptors,102.0,2019-20
+Los Angeles Lakers,103.8,2019-20
+Portland Trail Blazers,111.8,2019-20
+Golden State Warriors,110.9,2019-20
+San Antonio Spurs,110.9,2019-20
+Boston Celtics,104.5,2019-20
+Chicago Bulls,107.7,2019-20
+Dallas Mavericks,109.5,2019-20
+Indiana Pacers,105.1,2019-20
+Philadelphia 76ers,106.3,2019-20
+Sacramento Kings,109.6,2019-20
+Oklahoma City Thunder,106.3,2019-20
+Orlando Magic,107.1,2019-20
+New York Knicks,110.6,2019-20
+Cleveland Cavaliers,113.6,2019-20
+Utah Jazz,107.4,2019-20
+Miami Heat,107.2,2019-20
+Detroit Pistons,110.4,2019-20
+Denver Nuggets,108.6,2019-20
+Charlotte Hornets,110.6,2019-20
+Washington Wizards,110.5,2020-21
+Milwaukee Bucks,109.1,2020-21
+Golden State Warriors,107.7,2020-21
+Minnesota Timberwolves,112.1,2020-21
+Indiana Pacers,109.6,2020-21
+Houston Rockets,112.4,2020-21
+Oklahoma City Thunder,111.9,2020-21
+Memphis Grizzlies,108.5,2020-21
+New Orleans Pelicans,111.6,2020-21
+Sacramento Kings,114.6,2020-21
+Brooklyn Nets,110.6,2020-21
+Philadelphia 76ers,105.1,2020-21
+Toronto Raptors,109.8,2020-21
+Chicago Bulls,109.9,2020-21
+San Antonio Spurs,110.7,2020-21
+Portland Trail Blazers,113.4,2020-21
+Orlando Magic,112.1,2020-21
+Utah Jazz,105.7,2020-21
+Los Angeles Lakers,104.8,2020-21
+Boston Celtics,110.0,2020-21
+Charlotte Hornets,110.6,2020-21
+Detroit Pistons,110.3,2020-21
+Atlanta Hawks,110.6,2020-21
+Cleveland Cavaliers,112.1,2020-21
+Dallas Mavericks,110.4,2020-21
+Phoenix Suns,108.8,2020-21
+Denver Nuggets,110.0,2020-21
+LA Clippers,108.7,2020-21
+Miami Heat,108.5,2020-21
+New York Knicks,105.7,2020-21
+Minnesota Timberwolves,109.1,2021-22
+Houston Rockets,114.4,2021-22
+Memphis Grizzlies,106.2,2021-22
+San Antonio Spurs,110.0,2021-22
+Charlotte Hornets,111.0,2021-22
+Los Angeles Lakers,110.9,2021-22
+Milwaukee Bucks,109.4,2021-22
+Sacramento Kings,112.9,2021-22
+Phoenix Suns,104.7,2021-22
+Brooklyn Nets,109.6,2021-22
+Orlando Magic,110.3,2021-22
+Detroit Pistons,111.1,2021-22
+Oklahoma City Thunder,110.2,2021-22
+Golden State Warriors,103.9,2021-22
+Portland Trail Blazers,114.0,2021-22
+Indiana Pacers,113.9,2021-22
+Chicago Bulls,111.1,2021-22
+LA Clippers,107.5,2021-22
+Atlanta Hawks,112.1,2021-22
+Denver Nuggets,110.3,2021-22
+New Orleans Pelicans,110.5,2021-22
+Utah Jazz,107.7,2021-22
+Washington Wizards,111.7,2021-22
+Boston Celtics,104.0,2021-22
+Toronto Raptors,107.9,2021-22
+Philadelphia 76ers,108.3,2021-22
+New York Knicks,107.6,2021-22
+Cleveland Cavaliers,107.0,2021-22
+Miami Heat,106.3,2021-22
+Dallas Mavericks,106.8,2021-22
+Golden State Warriors,111.4,2022-23
+San Antonio Spurs,117.7,2022-23
+Indiana Pacers,115.4,2022-23
+Memphis Grizzlies,108.3,2022-23
+Oklahoma City Thunder,111.4,2022-23
+Los Angeles Lakers,111.5,2022-23
+Minnesota Timberwolves,111.1,2022-23
+Charlotte Hornets,112.6,2022-23
+Atlanta Hawks,113.6,2022-23
+Utah Jazz,113.8,2022-23
+Milwaukee Bucks,109.4,2022-23
+Sacramento Kings,114.1,2022-23
+Houston Rockets,116.9,2022-23
+Orlando Magic,111.5,2022-23
+Detroit Pistons,116.1,2022-23
+New Orleans Pelicans,109.9,2022-23
+Portland Trail Blazers,116.0,2022-23
+Phoenix Suns,110.1,2022-23
+Washington Wizards,113.3,2022-23
+Brooklyn Nets,110.9,2022-23
+Boston Celtics,108.8,2022-23
+Chicago Bulls,109.4,2022-23
+Denver Nuggets,111.7,2022-23
+LA Clippers,112.0,2022-23
+New York Knicks,111.8,2022-23
+Toronto Raptors,111.4,2022-23
+Philadelphia 76ers,110.2,2022-23
+Dallas Mavericks,114.0,2022-23
+Miami Heat,110.6,2022-23
+Cleveland Cavaliers,107.7,2022-23
+Washington Wizards,116.8,2023-24
+Indiana Pacers,115.5,2023-24
+San Antonio Spurs,113.8,2023-24
+Los Angeles Lakers,112.7,2023-24
+Atlanta Hawks,116.7,2023-24
+Dallas Mavericks,112.6,2023-24
+Oklahoma City Thunder,109.1,2023-24
+Milwaukee Bucks,112.8,2023-24
+Detroit Pistons,116.0,2023-24
+Utah Jazz,117.7,2023-24
+Toronto Raptors,115.8,2023-24
+Golden State Warriors,112.4,2023-24
+Houston Rockets,110.7,2023-24
+Sacramento Kings,112.9,2023-24
+Phoenix Suns,111.5,2023-24
+Memphis Grizzlies,111.7,2023-24
+New Orleans Pelicans,110.1,2023-24
+Philadelphia 76ers,111.0,2023-24
+Portland Trail Blazers,114.5,2023-24
+LA Clippers,112.3,2023-24
+Boston Celtics,109.0,2023-24
+Cleveland Cavaliers,109.9,2023-24
+Minnesota Timberwolves,106.2,2023-24
+Brooklyn Nets,113.1,2023-24
+Charlotte Hornets,117.0,2023-24
+Orlando Magic,108.6,2023-24
+Denver Nuggets,110.5,2023-24
+Chicago Bulls,113.2,2023-24
+Miami Heat,109.5,2023-24
+New York Knicks,111.2,2023-24
+Memphis Grizzlies,110.0,2024-25
+Chicago Bulls,113.1,2024-25
+Atlanta Hawks,112.5,2024-25
+Washington Wizards,116.2,2024-25
+Utah Jazz,116.9,2024-25
+Oklahoma City Thunder,104.3,2024-25
+Cleveland Cavaliers,109.1,2024-25
+Denver Nuggets,112.9,2024-25
+Detroit Pistons,109.7,2024-25
+Indiana Pacers,111.8,2024-25
+Toronto Raptors,111.6,2024-25
+San Antonio Spurs,114.2,2024-25
+Dallas Mavericks,112.7,2024-25
+New Orleans Pelicans,116.1,2024-25
+Milwaukee Bucks,110.9,2024-25
+Houston Rockets,107.4,2024-25
+Golden State Warriors,108.9,2024-25
+Portland Trail Blazers,112.9,2024-25
+Sacramento Kings,113.4,2024-25
+Charlotte Hornets,113.1,2024-25
+Los Angeles Lakers,111.1,2024-25
+Minnesota Timberwolves,108.5,2024-25
+LA Clippers,108.0,2024-25
+Philadelphia 76ers,115.2,2024-25
+New York Knicks,111.9,2024-25
+Phoenix Suns,115.7,2024-25
+Boston Celtics,108.0,2024-25
+Brooklyn Nets,112.6,2024-25
+Orlando Magic,107.0,2024-25
+Miami Heat,110.5,2024-25
