@@ -1,5 +1,5 @@
 # Description
-Fullstack Webapp using MongoDB and React to optimize user paylays using a neural network and optimization of user behavior.
+Fullstack Webapp using MongoDB and React that optimizes user paylays using a neural network and analysis of user behavior.
 
 # Install Instructions
 
