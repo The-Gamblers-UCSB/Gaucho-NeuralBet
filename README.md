@@ -9,6 +9,7 @@ Fullstack Webapp using MongoDB and React that optimizes user paylays using a neu
 3. Install MongoDB(Not as a service) [https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.1-signed.msi]
 
 # Local Setup
+
   Setup Commands:
 1. Run npm install
 2. Run npm install mongodb
