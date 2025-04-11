@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout, BatchNormalization, LeakyReLU
+from tensorflow.keras.layers import Dense, Dropout, BatchNormalization, LeakyReLU, Embedding, Flatten
 from tensorflow.keras.regularizers import l2
 from tensorflow.keras import Input
 import random
@@ -25,6 +25,8 @@ player_id = player_dict.get(player_To_Check.upper())
 if not player_id:
     raise ValueError("Player not found. Please check the spelling.")
 
+stat_To_Check = input("What stat do you want to predict(PTS, REB, AST, STL, BLK, FG3M, FTM): ")
+
 # Build mapping from team abbreviation to full team name
 all_teams = teams.get_teams()
 team_abbrev_to_name = {team["abbreviation"]: team["full_name"] for team in all_teams}
@@ -39,6 +41,12 @@ data = pd.DataFrame(games, columns=columns)
 
 data["GAME_DATE"] = pd.to_datetime(data["GAME_DATE"])
 data = data.sort_values(by="GAME_DATE")
+
+lag_features = ['PTS', 'AST', 'REB']
+lag_period = 1  # Using a one-game lag
+
+for feature in lag_features:
+    data[f'{feature}_lag{lag_period}'] = data[feature].shift(lag_period)
 
 # Create rolling averages for points, assists, and rebounds
 data["Rolling_PTS"] = data["PTS"].rolling(window=3, min_periods=1).mean()
@@ -61,6 +69,7 @@ def extract_opponent(matchup):
     return team_abbrev_to_name.get(opp_abbrev, opp_abbrev)
 
 data['OPPONENT'] = data['MATCHUP'].apply(extract_opponent)
+
 
 def convert_season_id(season_id):
     year = int(season_id[-4:])  # Extract the last 4 digits
@@ -124,10 +133,9 @@ data["OPP_TEAM_WIN_PCT"] = data["OPP_TEAM_WIN_PCT"].fillna(data["OPP_TEAM_WIN_PC
 data = data.dropna(subset=["PTS"])
 # Update the features list to include opponent stats instead of the player's own defensive metrics
 features = ["Rolling_PTS", "Rolling_AST", "Rolling_REB", "MIN", "FGM", "FGA", "FG_PCT", "FG3M", "FG3A", "FG3_PCT",
-           "FTM", "FTA", "FT_PCT", "OREB", "DREB", "STL", "BLK", "TO", "PF", "PLUS_MINUS", "HOME_GAME", "Back_to_Back",
-            "OPP_E_DEF_RATING", "OPP_TEAM_STL", "OPP_TEAM_BLK", "OPP_TEAM_WIN_PCT"]
-target = "PTS"
-
+           "FTM", "FTA", "FT_PCT", "OREB", "DREB", "STL", "BLK", "TO", "PF", "PLUS_MINUS", "PTS_lag1", "AST_lag1", "REB_lag1", 
+           "HOME_GAME", "Back_to_Back", "OPP_E_DEF_RATING", "OPP_TEAM_STL", "OPP_TEAM_BLK", "OPP_TEAM_WIN_PCT"]
+target = stat_To_Check.upper()
 data[features] = data[features].fillna(0)
 
 # Prepare training data
@@ -167,22 +175,32 @@ mae = mean_absolute_error(y_test, y_pred)
 next_game_features = data[features].iloc[-10:].mean()
 next_game_features_scaled = scaler.transform([next_game_features])
 predicted_points = model.predict(next_game_features_scaled)[0][0]
-
-print(f"Predicted Points for {player_To_Check.upper()} in the next game: {predicted_points:.2f}")
-print(f"On average, the model's predictions are off by {mae:.2f} points.")
-print(f'So...{player_To_Check.upper()} should score within {predicted_points - mae:.2f} - {predicted_points + mae:.2f} points')
+stat = "points"
+if stat_To_Check.upper() == "AST":
+    stat = "assists"
+elif stat_To_Check.upper() == "REB":
+    stat = "rebounds"
+elif stat_To_Check.upper() == "STL":
+    stat = "steals"
+elif stat_To_Check.upper() == "BLK":
+    stat = "blocks"
+elif stat_To_Check.upper() == "FG3M":
+    stat = "3-point field goals made"
+elif stat_To_Check.upper() == "FTM":
+    stat = "free throws made"
+print(f"Predicted {stat} for {player_To_Check.upper()} in the next game: {predicted_points:.2f}.")
+print(f"On average, the model's predictions are off by {mae:.2f} {stat}.")
+print(f'So...{player_To_Check.upper()} should get within {predicted_points - mae:.2f} - {predicted_points + mae:.2f} {stat}.')
 
 # ----------------------------------------------THIS PART IS FOR TESTING: UN-COMMENT TO TEST-------------------------------------------------
 
 
 # INPUT 5 PLAYERS OF DIFFERENT SKILL LEVELS
 # player_inputs = []
-# for i in range(5):
-#     player_name = input(f"Type NBA Player {i + 1}: ")
-#     player_inputs.append(player_name)
+# player_name = input(f"Type NBA Player: ")
+# player_inputs.append(player_name)
 
 # total_results = []
-
 # # Define the model outside the loop
 # def create_model():
 #     model = Sequential([
@@ -231,6 +249,15 @@ print(f'So...{player_To_Check.upper()} should score within {predicted_points - m
 #     data["GAME_DATE"] = pd.to_datetime(data["GAME_DATE"])
 #     data = data.sort_values(by="GAME_DATE")
 
+
+#     lag_features = ['PTS', 'AST', 'REB']
+#     lag_period = 1  # Using a one-game lag
+
+#     for feature in lag_features:
+#         data[f'{feature}_lag{lag_period}'] = data[feature].shift(lag_period)
+
+    
+#     data = data.dropna(subset=[f'{feature}_lag{lag_period}' for feature in lag_features])
 #     # Create rolling averages for points, assists, and rebounds
 #     data["Rolling_PTS"] = data["PTS"].rolling(window=3, min_periods=1).mean()
 #     data["Rolling_AST"] = data["AST"].rolling(window=3, min_periods=1).mean()
@@ -252,6 +279,7 @@ print(f'So...{player_To_Check.upper()} should score within {predicted_points - m
 #         return team_abbrev_to_name.get(opp_abbrev, opp_abbrev)
 
 #     data['OPPONENT'] = data['MATCHUP'].apply(extract_opponent)
+
 
 #     def convert_season_id(season_id):
 #         year = int(season_id[-4:])  # Extract the last 4 digits
@@ -314,9 +342,9 @@ print(f'So...{player_To_Check.upper()} should score within {predicted_points - m
 #     # Drop any remaining rows without points (if any)
 #     data = data.dropna(subset=["PTS"])
 #     # Update the features list to include opponent stats instead of the player's own defensive metrics
-#     features = ["Rolling_PTS", "Rolling_AST", "Rolling_REB", "MIN", "FGM", "FGA", "FG_PCT", "FG3M", "FG3A", "FG3_PCT",
-#             "FTM", "FTA", "FT_PCT", "OREB", "DREB", "STL", "BLK", "TO", "PF", "PLUS_MINUS", "HOME_GAME", "Back_to_Back",
-#             "OPP_E_DEF_RATING", "OPP_TEAM_STL", "OPP_TEAM_BLK", "OPP_TEAM_WIN_PCT"]
+#     features = ["Rolling_PTS", "Rolling_AST", "Rolling_REB", "MIN", "FGM", "FGA", "FG_PCT", "FG3M", "F3G3A", "FG3_PCT",
+#             "FTM", "FTA", "FT_PCT", "OREB", "DREB", "STL", "BLK", "TO", "PF", "PLUS_MINUS", "PTS_lag1", "REB_lag1", "AST_lag1", 
+#             "HOME_GAME", "Back_to_Back", "OPP_E_DEF_RATING", "OPP_TEAM_STL", "OPP_TEAM_BLK", "OPP_TEAM_WIN_PCT", "TEAM_VALUE"]
 #     target = "PTS"
 
 #     data[features] = data[features].fillna(0)
@@ -331,7 +359,8 @@ print(f'So...{player_To_Check.upper()} should score within {predicted_points - m
 #     current_season_data = current_season_data[current_season_data["GAME_DATE"].isin(valid_dates)]
 
 #     # Randomly select up to 5 unique dates - currently a 1
-#     random_dates = random.sample(list(current_season_data["GAME_DATE"].unique()), min(5, len(current_season_data["GAME_DATE"].unique())))
+#     random_dates = random.sample(list(current_season_data["GAME_DATE"].unique()), min(25, len(current_season_data["GAME_DATE"].unique())))
+
     
 
 #     for target_date in random_dates:
@@ -392,13 +421,13 @@ print(f'So...{player_To_Check.upper()} should score within {predicted_points - m
 
 
 # # Calculate total errors across all players
-# total_rmse = np.sqrt(mean_squared_error([result['Actual Points'] for result in total_results],
-#                                         [result['Predicted Points'] for result in total_results]))
+# total_rmae = mean_absolute_error([result['Actual Points'] for result in total_results],
+#                                         [result['Predicted Points'] for result in total_results])
 # total_mbe = np.mean([result['Predicted Points'] - result['Actual Points'] for result in total_results])
 # total_r2 = r2_score([result['Actual Points'] for result in total_results],
 #                     [result['Predicted Points'] for result in total_results])
 
 # print("\n--- Total Results Across All Players ---")
-# print(f"Total RMSE: {total_rmse:.2f}")
+# print(f"Total RMAE: {total_rmae:.2f}")
 # print(f"Total MBE: {total_mbe:.2f}")
 # print(f"Total R^2 Score: {total_r2:.2f}")
