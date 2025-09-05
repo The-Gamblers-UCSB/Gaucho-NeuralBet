@@ -165,14 +165,14 @@ const Message = ({ type = 'idle', msg }) => {
 const ResultDisplay = ({ data, info }) => (
   <div className="w-full space-y-6">
     <h2 className="text-center text-2xl font-bold mb-2">{info.icon} {info.label} – {data.player}</h2>
-    <div className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory md:grid md:grid-cols-3 md:gap-4 md:overflow-visible md:snap-none">
-      <StatCard className="min-w-[220px] snap-start" gradient="from-blue-600 to-blue-500" title={`Predicted ${info.label}`} value={data.prediction} />
-      <StatCard className="min-w-[220px] snap-start" gradient="from-emerald-600 to-emerald-500" title="Confidence" value={`${data.confidence}%`} />
-      <StatCard className="min-w-[220px] snap-start" gradient="from-purple-600 to-purple-500" title="Range" value={`${data.range.min}–${data.range.max}`} />
+    <div className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory px-1">
+      <StatCard className="min-w-[240px] snap-start" gradient="from-blue-600 to-blue-500" title={`Predicted ${info.label}`} value={data.prediction} />
+      <StatCard className="min-w-[240px] snap-start" gradient="from-emerald-600 to-emerald-500" title="Confidence" value={`${data.confidence}%`} />
+      <StatCard className="min-w-[240px] snap-start" gradient="from-purple-600 to-purple-500" title="Range" value={`${data.range.min}–${data.range.max}`} />
     </div>
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-300 max-w-md mx-auto">
-      <InfoRow k="Games analysed" v={data.data_points} />
-      <InfoRow k="Model MAE" v={data.mae} />
+    <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-slate-300 max-w-2xl mx-auto">
+      <MetaChip k="Games analysed" v={data.data_points} />
+      <MetaChip k="Model MAE" v={data.mae} />
     </div>
   </div>
 );
@@ -184,9 +184,10 @@ const StatCard = ({ title, value, gradient, className = "" }) => (
   </div>
 );
 
-const InfoRow = ({ k, v }) => (
-  <div className="flex justify-between bg-white/5 px-4 py-2 rounded-xl backdrop-blur-sm">
-    <span>{k}</span><span className="font-semibold text-slate-100">{v}</span>
+const MetaChip = ({ k, v }) => (
+  <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+    <span className="opacity-70 mr-1">{k}:</span>
+    <span className="font-semibold text-slate-100">{v}</span>
   </div>
 );
 
