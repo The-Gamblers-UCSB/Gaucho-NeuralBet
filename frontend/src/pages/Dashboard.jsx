@@ -162,20 +162,57 @@ const Message = ({ type = 'idle', msg }) => {
   );
 };
 
-const ResultDisplay = ({ data, info }) => (
-  <div className="w-full space-y-6">
-    <h2 className="text-center text-2xl font-bold mb-2">{info.icon} {info.label} – {data.player}</h2>
-    <div className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory px-1">
-      <StatCard className="min-w-[240px] snap-start" gradient="from-blue-600 to-blue-500" title={`Predicted ${info.label}`} value={data.prediction} />
-      <StatCard className="min-w-[240px] snap-start" gradient="from-emerald-600 to-emerald-500" title="Confidence" value={`${data.confidence}%`} />
-      <StatCard className="min-w-[240px] snap-start" gradient="from-purple-600 to-purple-500" title="Range" value={`${data.range.min}–${data.range.max}`} />
+const ResultDisplay = ({ data, info }) => {
+  const max = getStatMax(info.value);
+  const pred = Number(data.prediction) || 0;
+  const conf = Number(data.confidence) || 0;
+  const rMin = Number(data?.range?.min);
+  const rMax = Number(data?.range?.max);
+  return (
+    <div className="w-full space-y-6">
+      <div className="flex items-center justify-center gap-3">
+        <span className="text-2xl">{info.icon}</span>
+        <h2 className="text-2xl font-bold">{info.label} – {data.player}</h2>
+      </div>
+
+      <div className="space-y-5">
+        <BarRow
+          title={`Predicted ${info.label}`}
+          value={pred}
+          unit=""
+          domainMax={max}
+          rangeMin={Number.isFinite(rMin) ? rMin : undefined}
+          rangeMax={Number.isFinite(rMax) ? rMax : undefined}
+          color="from-blue-500 to-indigo-600"
+          showValueFill
+        />
+        <BarRow
+          title="Confidence"
+          value={conf}
+          unit="%"
+          domainMax={100}
+          color="from-emerald-500 to-teal-600"
+          showValueFill
+        />
+        <BarRow
+          title="Range"
+          value={pred}
+          unit=""
+          domainMax={max}
+          rangeMin={Number.isFinite(rMin) ? rMin : undefined}
+          rangeMax={Number.isFinite(rMax) ? rMax : undefined}
+          color="from-purple-500 to-fuchsia-600"
+          showMarker
+        />
+      </div>
+
+      <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-slate-300 max-w-2xl mx-auto">
+        <MetaChip k="Games analysed" v={data.data_points} />
+        <MetaChip k="Model MAE" v={data.mae} />
+      </div>
     </div>
-    <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-slate-300 max-w-2xl mx-auto">
-      <MetaChip k="Games analysed" v={data.data_points} />
-      <MetaChip k="Model MAE" v={data.mae} />
-    </div>
-  </div>
-);
+  );
+};
 
 const StatCard = ({ title, value, gradient, className = "" }) => (
   <div className={`text-center rounded-2xl p-5 bg-gradient-to-br ${gradient} shadow-lg ${className}`}>
@@ -190,6 +227,46 @@ const MetaChip = ({ k, v }) => (
     <span className="font-semibold text-slate-100">{v}</span>
   </div>
 );
+
+const BarRow = ({ title, value, unit, domainMax, rangeMin, rangeMax, color, showMarker = false, showValueFill = false }) => {
+  const max = Math.max(1, Number(domainMax) || 1);
+  const clamp = (n) => Math.min(max, Math.max(0, Number(n) || 0));
+  const v = clamp(value);
+  const left = rangeMin !== undefined ? (100 * clamp(rangeMin)) / max : null;
+  const right = rangeMax !== undefined ? (100 * clamp(rangeMax)) / max : null;
+  const width = (100 * v) / max;
+  return (
+    <div className="space-y-2">
+      <div className="flex items-baseline justify-between">
+        <p className="text-sm text-slate-300">{title}</p>
+        <p className="text-sm font-semibold text-slate-100">{value}{unit}</p>
+      </div>
+      <div className="relative h-3 rounded-full bg-white/10 overflow-hidden">
+        {showValueFill && (
+          <div className={`absolute inset-y-0 left-0 bg-gradient-to-r ${color}`} style={{ width: `${width}%` }} />
+        )}
+        {left !== null && right !== null && (
+          <div
+            className="absolute inset-y-0 bg-white/25 rounded-full"
+            style={{ left: `${left}%`, width: `${Math.max(0, right - left)}%` }}
+          />
+        )}
+        {showMarker && (
+          <div className="absolute -top-1 h-5 w-0.5 bg-white/80" style={{ left: `${width}%` }} />
+        )}
+      </div>
+      <div className="flex justify-between text-[10px] text-slate-500">
+        <span>0</span>
+        <span>{max}</span>
+      </div>
+    </div>
+  );
+};
+
+const getStatMax = (stat) => {
+  const map = { PTS: 70, REB: 30, AST: 20, STL: 8, BLK: 8, FG3M: 15, FTM: 20 };
+  return map[stat] ?? 100;
+};
 
 const Blobs = () => (
   <div className="pointer-events-none absolute inset-0 overflow-hidden">
