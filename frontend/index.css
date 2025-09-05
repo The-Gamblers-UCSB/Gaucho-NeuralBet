@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html, body, #root { @apply h-full; }
+  body { @apply antialiased bg-[#0b1120] text-slate-100 selection:bg-indigo-500/30 selection:text-white; }
+}
+
+@layer utilities {
+  .animation-delay-2000 { animation-delay: 2s; }
+  .animation-delay-4000 { animation-delay: 4s; }
+}
