@@ -42,7 +42,7 @@ export default function Dashboard() {
     if (!player.trim()) return setErr("Enter a player name first.");
     setBusy(true); setErr(""), setResult(null);
     try {
-      const { data } = await axios.post("http://localhost:5001/api/nba/predict", {
+      const { data } = await axios.post("https://gaucho-neuralbet-production.up.railway.app/api/nba/predict", {
         playerName: player.trim(), stat,
       });
       if (!data?.success) throw new Error(data?.error || "Unknown error");

@@ -25,7 +25,7 @@ function Signup() {
     const { name, email, password } = formData;
 
     try {
-      const response = await axios.post('http://localhost:5001/api/users/register', { name, email, password });
+      const response = await axios.post('https://gaucho-neuralbet-production.up.railway.app/api/users/register', { name, email, password });
       console.log('User registered successfully!', response.data);
       toast({
         title: "Registration successful!",

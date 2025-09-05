@@ -25,7 +25,7 @@ function Login() {
     const { email, password } = formData;
 
     try {
-      const response = await axios.post('http://localhost:5001/api/users/login', { email, password });
+      const response = await axios.post('https://gaucho-neuralbet-production.up.railway.app/api/users/login', { email, password });
       console.log('User logged in successfully!', response.data);
       toast({
         title: "Login successful.",
