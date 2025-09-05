@@ -10,11 +10,11 @@ const __dirname  = path.dirname(__filename);
 const projectRoot = path.join(__dirname, '..');                   // /backend
 const pythonScriptPath = path.join(projectRoot, 'nba_prediction_api.py');
 
-// Try different Python paths for Railway deployment
+// Try different Python commands for Railway deployment
 const getPythonPath = () => {
   if (process.env.NODE_ENV === 'production') {
-    // Try different Python commands for Railway
-    return 'python3';
+    // Try different Python commands for Railway - use 'python' instead of 'python3'
+    return 'python';
   }
   return path.join(projectRoot, '..', 'venv', 'bin', 'python');
 };
