@@ -73,7 +73,7 @@ export default function Dashboard() {
 
       {/* CARD */}
       <section className="relative z-10 mx-auto mt-12 w-full max-w-5xl px-4">
-        <div className="backdrop-blur-md/80 bg-white/5 border border-white/10 rounded-3xl shadow-2xl ring-1 ring-white/10 overflow-hidden">
+        <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl shadow-2xl ring-1 ring-white/10 overflow-hidden">
           <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
             {/* LEFT – INPUTS */}
             <div className="space-y-8">
