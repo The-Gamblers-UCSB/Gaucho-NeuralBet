@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 
 import routes from "./routes/productRoute.js"; // <— your existing product/user routes
 import nbaRouter from "./routes/nbaRoute.js"; // <— new NBA prediction routes
+import { connectDB } from "./config/db.js"; // <— import database connection
 
 dotenv.config();
 
@@ -15,6 +16,9 @@ console.log("Python available:", process.platform);
 
 const app = express();
 const PORT = process.env.PORT || 5001;
+
+// Connect to database
+connectDB();
 
 // middleware
 app.use(express.json());
