@@ -9,11 +9,11 @@ const __dirname  = path.dirname(__filename);
 // Adjust these if your structure differs
 const projectRoot = path.join(__dirname, '..');                   // /backend
 const pythonScriptPath = path.join(projectRoot, 'nba_prediction_api.py');
-const venvPythonPath   = path.join(projectRoot, '..', 'venv', 'bin', 'python');
+const pythonPath = process.env.NODE_ENV === 'production' ? 'python3' : path.join(projectRoot, '..', 'venv', 'bin', 'python');
 
 export function runPrediction(playerName, stat) {
   return new Promise((resolve) => {
-    const child = spawn(venvPythonPath, [pythonScriptPath, playerName, stat], {
+    const child = spawn(pythonPath, [pythonScriptPath, playerName, stat], {
       cwd: projectRoot,            // run inside /backend so CSVs are found
       stdio: ['ignore', 'pipe', 'pipe'],
     });
