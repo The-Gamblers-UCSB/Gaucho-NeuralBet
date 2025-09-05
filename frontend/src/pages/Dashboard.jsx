@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 /* ------------------------------------------------------------------
    Gaucho NeuralBet – Dashboard v2  
    – Radial-gradient canvas + animated floating blobs
-   – Full-width hero banner, sticky glass card centred on page
+   – Full-width hero banner, sticky glass card centered on page
    – Framer-motion hover & tap effects for tactile UI
    – Accessible focus rings + prefers-color-scheme support
    ------------------------------------------------------------------ */
@@ -85,7 +85,8 @@ export default function Dashboard() {
                       whileTap={{ scale: 0.9 }}
                       key={p.name}
                       onClick={() => setPlayer(p.name)}
-                      className="rounded-xl bg-white/10 px-4 py-3 border border-transparent hover:border-blue-500/60 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600/40">
+                      className="rounded-xl bg-white/10 px-4 py-3 border border-transparent hover:border-blue-500/60 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600/40"
+                    >
                       <p className="text-sm font-medium truncate">{p.name}</p>
                       <p className="text-xs text-slate-400">{p.team}</p>
                     </motion.button>
@@ -116,7 +117,8 @@ export default function Dashboard() {
                       whileTap={{ scale: 0.95 }}
                       onClick={handlePredict}
                       disabled={busy || !player.trim()}
-                      className="w-full flex justify-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-700 hover:to-purple-800 rounded-xl py-4 font-semibold disabled:opacity-40 disabled:cursor-not-allowed shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-400/60">
+                      className="w-full flex justify-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-700 hover:to-purple-800 rounded-xl py-4 font-semibold disabled:opacity-40 disabled:cursor-not-allowed shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-400/60"
+                    >
                       {busy ? (<Spinner />) : '🎯 Get Prediction'}
                     </motion.button>
                   </div>
@@ -165,7 +167,7 @@ const Message = ({ type = 'idle', msg }) => {
 const ResultDisplay = ({ data, info }) => (
   <div className="w-full space-y-6">
     <h2 className="text-center text-2xl font-bold mb-2">{info.icon} {info.label} – {data.player}</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div className="flex flex-wrap gap-6 justify-center">
       <StatCard gradient="from-blue-600 to-blue-500" title={`Predicted ${info.label}`} value={data.prediction} />
       <StatCard gradient="from-emerald-600 to-emerald-500" title="Confidence" value={`${data.confidence}%`} />
       <StatCard gradient="from-purple-600 to-purple-500" title="Range" value={`${data.range.min}–${data.range.max}`} />
