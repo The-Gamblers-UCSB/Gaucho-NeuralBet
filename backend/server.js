@@ -8,6 +8,11 @@ import nbaRouter from "./routes/nbaRoute.js"; // <— new NBA prediction routes
 
 dotenv.config();
 
+// Debug environment
+console.log("NODE_ENV:", process.env.NODE_ENV);
+console.log("PORT:", process.env.PORT);
+console.log("Python available:", process.platform);
+
 const app = express();
 const PORT = process.env.PORT || 5001;
 

@@ -9,10 +9,23 @@ const __dirname  = path.dirname(__filename);
 // Adjust these if your structure differs
 const projectRoot = path.join(__dirname, '..');                   // /backend
 const pythonScriptPath = path.join(projectRoot, 'nba_prediction_api.py');
-const pythonPath = process.env.NODE_ENV === 'production' ? 'python3' : path.join(projectRoot, '..', 'venv', 'bin', 'python');
+
+// Try different Python paths for Railway deployment
+const getPythonPath = () => {
+  if (process.env.NODE_ENV === 'production') {
+    // Try different Python commands for Railway
+    return 'python3';
+  }
+  return path.join(projectRoot, '..', 'venv', 'bin', 'python');
+};
 
 export function runPrediction(playerName, stat) {
   return new Promise((resolve) => {
+    const pythonPath = getPythonPath();
+    console.log('Using Python path:', pythonPath);
+    console.log('Script path:', pythonScriptPath);
+    console.log('Working directory:', projectRoot);
+    
     const child = spawn(pythonPath, [pythonScriptPath, playerName, stat], {
       cwd: projectRoot,            // run inside /backend so CSVs are found
       stdio: ['ignore', 'pipe', 'pipe'],
@@ -25,6 +38,10 @@ export function runPrediction(playerName, stat) {
     child.stderr.on('data', (d) => (stderr += d.toString()));
 
     child.on('close', (code) => {
+      console.log('Python process exited with code:', code);
+      console.log('stdout:', stdout);
+      console.log('stderr:', stderr);
+      
       if (code !== 0) {
         console.error('Python error:', stderr || stdout);
         return resolve({ success: false, error: 'Python script execution failed' });
