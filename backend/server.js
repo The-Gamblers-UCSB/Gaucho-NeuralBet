@@ -1,22 +1,35 @@
+// backend/server.js
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { connectDB } from './config/db.js';  
-import routes from './routes/productRoute.js';  
 
-dotenv.config(); 
+import routes from './routes/productRoute.js';              // <— your existing product/user routes
+import nbaRouter from './routes/nbaRoute.js';               // <— new NBA prediction routes
+
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-
-app.use(cors());
+// middleware
 app.use(express.json());
+app.use(cors({
+  origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 
+// routes
+app.use('/api/users', routes);        // your original set
+app.use('/api/nba', nbaRouter);       // prediction lives here
 
-app.use('/api/users', routes);
+// health
+app.get('/api/health', (_req, res) => {
+  res.json({ status: 'healthy', service: 'NBA + Users API', ts: new Date().toISOString() });
+});
 
+// start
 app.listen(PORT, () => {
-  connectDB();
   console.log(`Server started at http://localhost:${PORT}`);
 });

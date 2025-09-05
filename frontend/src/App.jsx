@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import Login from './pages/Login'; // Adjust import paths if necessary
 import Signup from './pages/Signup'; // Adjust import paths if necessary
 import HomePage from './pages/HomePage'; // Adjust import paths if necessary
+import Dashboard from './pages/Dashboard'; // Adjust import paths if necessary
 import { ChakraProvider } from "@chakra-ui/react"; // Import ChakraProvider
 import { extendTheme } from "@chakra-ui/react"; // Import extendTheme
 import Header from './components/header';
@@ -28,7 +29,7 @@ function App() {
       <Router>
         <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path='/' element={<HomePage />} />  {/* Default route */}
+          <Route path='/' element={<Dashboard />} />  {/* Default route */}
           <Route path='/register' element={<Signup />} />
           <Route path='/login' element={<Login />} />
           <Route path="*" element={<NotFound />} />
