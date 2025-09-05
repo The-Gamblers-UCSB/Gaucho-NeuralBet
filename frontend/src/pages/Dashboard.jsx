@@ -241,7 +241,7 @@ const BarRow = ({ title, value, unit, domainMax, rangeMin, rangeMax, color, show
         <p className="text-sm text-slate-300">{title}</p>
         <p className="text-sm font-semibold text-slate-100">{value}{unit}</p>
       </div>
-      <div className="relative h-3 rounded-full bg-white/10 overflow-hidden">
+      <div className="relative h-4 sm:h-5 w-full rounded-full bg-white/10 overflow-hidden">
         {showValueFill && (
           <div className={`absolute inset-y-0 left-0 bg-gradient-to-r ${color}`} style={{ width: `${width}%` }} />
         )}
@@ -252,7 +252,7 @@ const BarRow = ({ title, value, unit, domainMax, rangeMin, rangeMax, color, show
           />
         )}
         {showMarker && (
-          <div className="absolute -top-1 h-5 w-0.5 bg-white/80" style={{ left: `${width}%` }} />
+          <div className="absolute -top-1 h-6 w-0.5 bg-white/80" style={{ left: `${width}%` }} />
         )}
       </div>
       <div className="flex justify-between text-[10px] text-slate-500">
